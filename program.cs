@@ -10,7 +10,11 @@ prices.Add(32);
 names.Add("Ost");
 prices.Add(89);
 
-Console.WriteLine($"{names[0]} - {prices[0]} kr");
-Console.WriteLine($"{names[1]} - {prices[1]} kr");
-Console.WriteLine($"{names[2]} - {prices[2]} kr");
-Console.WriteLine($"Totalpris: {prices[0] + prices[1] + prices[2]} kr");
+int total = 0; 
+for (int i = 0; i < names.Count; i++)
+{
+    Console.WriteLine($"{i +1}. {names[i]} - {prices[i]} kr");
+    total += prices[i];
+}
+
+Console.WriteLine($"Totalt: {total} kr");
